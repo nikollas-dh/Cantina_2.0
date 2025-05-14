@@ -14,3 +14,5 @@ C:\Users\25163076\Desktop\C#\Atividades\Cantina_2.0\obj\Debug\net8.0-windows\ref
 C:\Users\25163076\Desktop\C#\Atividades\Cantina_2.0\obj\Debug\net8.0-windows\Cantina_2.0.pdb
 C:\Users\25163076\Desktop\C#\Atividades\Cantina_2.0\obj\Debug\net8.0-windows\Cantina_2.0.genruntimeconfig.cache
 C:\Users\25163076\Desktop\C#\Atividades\Cantina_2.0\obj\Debug\net8.0-windows\ref\Cantina_2.0.dll
+C:\Users\25163076\Desktop\C#\Atividades\Cantina_2.0\obj\Debug\net8.0-windows\Cantina_2.0.sourcelink.json
+C:\Users\25163076\Desktop\C#\Atividades\Cantina_2.0\obj\Debug\net8.0-windows\Cantina_2._0.Properties.Resources.resources

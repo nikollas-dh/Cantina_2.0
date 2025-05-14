@@ -35,6 +35,7 @@ namespace Cantina_2._0
             {
                 carrinho.Adicionar(produto);
                 listBox2.Items.Add(produto);
+                AtualizarTotal();
             }
 
         }
@@ -50,6 +51,7 @@ namespace Cantina_2._0
             {
                 carrinho.Remover(produto);
                 listBox2.Items.Remove(produto);
+                AtualizarTotal();
             }
         }
 
@@ -58,6 +60,26 @@ namespace Cantina_2._0
             MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
             carrinho.Limpar();
             listBox2.Items.Clear();
+            AtualizarTotal();
+        }
+        private void AtualizarTotal()
+        {
+            lblTotal.Text = $"Total: R${carrinho.Total():F2}";
+        }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumQuantidade_ValueChanged(object sender, EventArgs e)
+        {
+            NumQuantidade.Value = 1;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
