@@ -11,6 +11,7 @@ namespace Cantina_2._0
     {
         public string Nome {  get; set; }
         public double Preco { get; set; } 
+        public int Quantidade { get; set; }
             
     }
 

@@ -68,7 +68,7 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.BackColor = Color.FromArgb(230, 255, 0);
+            btnAdicionar.BackColor = Color.FromArgb(202, 196, 183);
             btnAdicionar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicionar.Location = new Point(301, 146);
             btnAdicionar.Name = "btnAdicionar";
@@ -80,7 +80,7 @@
             // 
             // btnRemover
             // 
-            btnRemover.BackColor = Color.FromArgb(230, 255, 0);
+            btnRemover.BackColor = Color.FromArgb(202, 196, 183);
             btnRemover.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRemover.Location = new Point(301, 175);
             btnRemover.Name = "btnRemover";
@@ -92,7 +92,7 @@
             // 
             // btnFinalizar
             // 
-            btnFinalizar.BackColor = Color.FromArgb(230, 255, 0);
+            btnFinalizar.BackColor = Color.FromArgb(202, 196, 183);
             btnFinalizar.FlatAppearance.BorderColor = Color.Black;
             btnFinalizar.FlatAppearance.BorderSize = 0;
             btnFinalizar.FlatAppearance.MouseDownBackColor = Color.Black;
@@ -170,7 +170,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(202, 196, 183);
+            BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
             Controls.Add(lblTotal);
             Controls.Add(total);

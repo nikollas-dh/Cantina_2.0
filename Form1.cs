@@ -26,6 +26,8 @@ namespace Cantina_2._0
             listBox1.Items.Add(new Produto { Nome = "X-Tudo - R$12,00", Preco = 12 });
             listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml) - R$2,50", Preco = 2.5 });
 
+            NumQuantidade.Minimum = 1;
+            NumQuantidade.Maximum = 10;
 
         }
 
@@ -33,6 +35,8 @@ namespace Cantina_2._0
         {
             if (listBox1.SelectedItem is Produto produto)
             {
+                int quantidade = (int)NumQuantidade.Value;
+
                 carrinho.Adicionar(produto);
                 listBox2.Items.Add(produto);
                 AtualizarTotal();
@@ -64,7 +68,7 @@ namespace Cantina_2._0
         }
         private void AtualizarTotal()
         {
-            lblTotal.Text = $"Total: R${carrinho.Total():F2}";
+            lblTotal.Text = $"R${carrinho.Total():F2}";
         }
 
         private void lbl_Click(object sender, EventArgs e)
@@ -74,7 +78,7 @@ namespace Cantina_2._0
 
         private void NumQuantidade_ValueChanged(object sender, EventArgs e)
         {
-            NumQuantidade.Value = 1;
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
