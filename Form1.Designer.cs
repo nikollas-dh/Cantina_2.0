@@ -40,6 +40,9 @@
             total = new Label();
             lblTotal = new Label();
             pictureBox1 = new PictureBox();
+            comboBoxPagamento = new ComboBox();
+            txtValorPago = new TextBox();
+            txtTroco = new TextBox();
             ((System.ComponentModel.ISupportInitialize)NumQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -47,12 +50,13 @@
             // listBox1
             // 
             listBox1.BackColor = Color.FromArgb(243, 241, 238);
+            listBox1.BorderStyle = BorderStyle.FixedSingle;
             listBox1.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(81, 146);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(214, 154);
+            listBox1.Size = new Size(214, 152);
             listBox1.TabIndex = 0;
             // 
             // listBox2
@@ -166,12 +170,37 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // comboBoxPagamento
+            // 
+            comboBoxPagamento.FormattingEnabled = true;
+            comboBoxPagamento.Location = new Point(301, 221);
+            comboBoxPagamento.Name = "comboBoxPagamento";
+            comboBoxPagamento.Size = new Size(86, 23);
+            comboBoxPagamento.TabIndex = 11;
+            // 
+            // txtValorPago
+            // 
+            txtValorPago.Location = new Point(301, 250);
+            txtValorPago.Name = "txtValorPago";
+            txtValorPago.Size = new Size(86, 23);
+            txtValorPago.TabIndex = 12;
+            // 
+            // txtTroco
+            // 
+            txtTroco.Location = new Point(301, 279);
+            txtTroco.Name = "txtTroco";
+            txtTroco.Size = new Size(86, 23);
+            txtTroco.TabIndex = 13;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(800, 450);
+            Controls.Add(txtTroco);
+            Controls.Add(txtValorPago);
+            Controls.Add(comboBoxPagamento);
             Controls.Add(lblTotal);
             Controls.Add(total);
             Controls.Add(lbl);
@@ -204,5 +233,8 @@
         private Label total;
         private Label lblTotal;
         private PictureBox pictureBox1;
+        private ComboBox comboBoxPagamento;
+        private TextBox txtValorPago;
+        private TextBox txtTroco;
     }
 }
