@@ -25,17 +25,23 @@ namespace Cantina_2._0
             listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.5, });
             listBox1.Items.Add(new Produto { Nome = "Hamburguer Simples", Preco = 8, });
             listBox1.Items.Add(new Produto { Nome = "Hamburguer com Queijo", Preco = 9, });
-            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 12, });
+            listBox1.Items.Add(new Produto { Nome = "X-Bacon", Preco = 12, });
+            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 15, });
             listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml)", Preco = 2.5, });
+
 
             NumQuantidade.Minimum = 1;
             NumQuantidade.Maximum = 10;
 
             Escolha escolha = new Escolha();
-            comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Pix"});
+            comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Pix" });
             comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Dinheiro" });
             comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Débito" });
 
+            txtValorPago.Visible = false;
+            lblValor.Visible = false;
+            lblTroco.Visible = false;
+            txtTroco.Visible = false;
 
         }
 
@@ -48,7 +54,7 @@ namespace Cantina_2._0
                 var novoProduto = new Produto
                 {
                     Nome = produtoSelecionado.Nome,
-                    Preco = produtoSelecionado.Preco*quantidade,
+                    Preco = produtoSelecionado.Preco * quantidade,
                     Quantidade = quantidade
 
                 };
@@ -97,19 +103,27 @@ namespace Cantina_2._0
                             return;
                         }
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show($"Digite apenas valores válidos");
                         return;
                     }
                 }
+                if (cmbViagem.SelectedItem == "SIM") 
+                { 
+                listBox2.Items.Add("Para Viagem");
                 }
-                MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
-                carrinho.Limpar();
-                listBox2.Items.Clear();
-                AtualizarTotal();
             }
-        
+            MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
+            carrinho.Limpar();
+            listBox2.Items.Clear();
+            txtNome.Clear();
+            txtTroco.Clear();
+            txtValorPago.Clear();
+
+            AtualizarTotal();
+        }
+
         private void AtualizarTotal()
         {
             lblTotal.Text = $"R${carrinho.Total():F2}";
@@ -128,6 +142,27 @@ namespace Cantina_2._0
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void comboBoxPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool dinheiro = comboBoxPagamento.SelectedItem?.ToString() == "Dinheiro";
+            txtValorPago.Visible = dinheiro;
+            lblValor.Visible = dinheiro;
+            lblTroco.Visible = dinheiro;
+            txtTroco.Visible = dinheiro;
+
+            lblTroco.Visible = dinheiro;
+        }
+
+        private void lblValor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
 
         }
     }
