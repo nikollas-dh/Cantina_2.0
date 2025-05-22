@@ -58,30 +58,28 @@
             // 
             listBox1.BackColor = Color.White;
             listBox1.BorderStyle = BorderStyle.FixedSingle;
-            listBox1.Font = new Font("Inter", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox1.Font = new Font("Inter", 8.25F);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 18;
             listBox1.Location = new Point(33, 166);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(276, 164);
+            listBox1.Size = new Size(276, 146);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // listBox2
             // 
             listBox2.BackColor = Color.White;
-            listBox2.Font = new Font("Inter", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox2.Font = new Font("Inter", 8.25F);
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 18;
             listBox2.Location = new Point(623, 163);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(265, 166);
+            listBox2.Size = new Size(265, 148);
             listBox2.TabIndex = 1;
             // 
             // btnAdicionar
             // 
             btnAdicionar.BackColor = Color.FromArgb(202, 196, 183);
-            btnAdicionar.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdicionar.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicionar.Location = new Point(200, 366);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(109, 37);
@@ -93,7 +91,7 @@
             // btnRemover
             // 
             btnRemover.BackColor = Color.FromArgb(202, 196, 183);
-            btnRemover.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRemover.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
             btnRemover.Location = new Point(623, 366);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(86, 37);
@@ -108,7 +106,7 @@
             btnFinalizar.FlatAppearance.BorderColor = Color.Black;
             btnFinalizar.FlatAppearance.BorderSize = 0;
             btnFinalizar.FlatAppearance.MouseDownBackColor = Color.Black;
-            btnFinalizar.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFinalizar.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
             btnFinalizar.Location = new Point(428, 366);
             btnFinalizar.Name = "btnFinalizar";
             btnFinalizar.Size = new Size(106, 36);
@@ -119,19 +117,20 @@
             // 
             // NumQuantidade
             // 
+            NumQuantidade.Font = new Font("Inter", 8.25F);
             NumQuantidade.Location = new Point(33, 338);
             NumQuantidade.Name = "NumQuantidade";
-            NumQuantidade.Size = new Size(137, 23);
+            NumQuantidade.Size = new Size(137, 21);
             NumQuantidade.TabIndex = 5;
             NumQuantidade.ValueChanged += NumQuantidade_ValueChanged;
             // 
             // lblCardápio
             // 
             lblCardápio.AutoSize = true;
-            lblCardápio.Font = new Font("Inter", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCardápio.Location = new Point(71, 116);
+            lblCardápio.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCardápio.Location = new Point(95, 116);
             lblCardápio.Name = "lblCardápio";
-            lblCardápio.Size = new Size(180, 32);
+            lblCardápio.Size = new Size(138, 24);
             lblCardápio.TabIndex = 6;
             lblCardápio.Text = "🍔Cardápio🍔";
             lblCardápio.Click += label1_Click;
@@ -139,10 +138,10 @@
             // lbl
             // 
             lbl.AutoSize = true;
-            lbl.Font = new Font("Inter", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl.Location = new Point(666, 116);
+            lbl.Font = new Font("Inter", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl.Location = new Point(680, 116);
             lbl.Name = "lbl";
-            lbl.Size = new Size(181, 32);
+            lbl.Size = new Size(152, 27);
             lbl.TabIndex = 7;
             lbl.Text = "\U0001f6d2 Carrinho\U0001f6d2";
             lbl.Click += lbl_Click;
@@ -151,19 +150,19 @@
             // 
             total.AutoSize = true;
             total.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            total.Location = new Point(746, 418);
+            total.Location = new Point(758, 418);
             total.Name = "total";
-            total.Size = new Size(66, 28);
+            total.Size = new Size(54, 23);
             total.TabIndex = 8;
             total.Text = "Total:";
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Font = new Font("Inter", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(818, 422);
+            lblTotal.Font = new Font("Inter Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(818, 419);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(70, 24);
+            lblTotal.Size = new Size(65, 22);
             lblTotal.TabIndex = 9;
             lblTotal.Text = "R$0,00";
             lblTotal.Click += lblTotal_Click;
@@ -181,29 +180,29 @@
             // 
             // comboBoxPagamento
             // 
-            comboBoxPagamento.Font = new Font("Inter Medium", 7.8F, FontStyle.Bold);
+            comboBoxPagamento.Font = new Font("Inter", 8.25F);
             comboBoxPagamento.FormattingEnabled = true;
             comboBoxPagamento.Location = new Point(428, 246);
             comboBoxPagamento.Name = "comboBoxPagamento";
-            comboBoxPagamento.Size = new Size(106, 26);
+            comboBoxPagamento.Size = new Size(106, 24);
             comboBoxPagamento.TabIndex = 11;
             comboBoxPagamento.SelectedIndexChanged += comboBoxPagamento_SelectedIndexChanged;
             // 
             // txtValorPago
             // 
-            txtValorPago.Font = new Font("Inter Medium", 7.8F, FontStyle.Bold);
+            txtValorPago.Font = new Font("Inter", 8.25F);
             txtValorPago.Location = new Point(428, 286);
             txtValorPago.Name = "txtValorPago";
-            txtValorPago.Size = new Size(106, 23);
+            txtValorPago.Size = new Size(106, 21);
             txtValorPago.TabIndex = 12;
             // 
             // lblValor
             // 
             lblValor.AutoSize = true;
-            lblValor.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblValor.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             lblValor.Location = new Point(334, 286);
             lblValor.Name = "lblValor";
-            lblValor.Size = new Size(53, 22);
+            lblValor.Size = new Size(42, 17);
             lblValor.TabIndex = 14;
             lblValor.Text = "Valor:";
             lblValor.Click += lblValor_Click;
@@ -211,28 +210,28 @@
             // lblTroco
             // 
             lblTroco.AutoSize = true;
-            lblTroco.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTroco.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTroco.Location = new Point(334, 323);
             lblTroco.Name = "lblTroco";
-            lblTroco.Size = new Size(57, 22);
+            lblTroco.Size = new Size(45, 17);
             lblTroco.TabIndex = 16;
             lblTroco.Text = "Troco:";
             // 
             // txtNome
             // 
-            txtNome.Font = new Font("Inter Medium", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNome.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNome.Location = new Point(428, 172);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(106, 23);
+            txtNome.Size = new Size(106, 21);
             txtNome.TabIndex = 17;
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNome.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             lblNome.Location = new Point(334, 173);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(58, 22);
+            lblNome.Size = new Size(46, 17);
             lblNome.TabIndex = 18;
             lblNome.Text = "Nome:";
             lblNome.Click += lblNome_Click;
@@ -240,49 +239,49 @@
             // lblPagamento
             // 
             lblPagamento.AutoSize = true;
-            lblPagamento.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPagamento.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             lblPagamento.Location = new Point(330, 250);
             lblPagamento.Name = "lblPagamento";
-            lblPagamento.Size = new Size(98, 22);
+            lblPagamento.Size = new Size(78, 17);
             lblPagamento.TabIndex = 19;
             lblPagamento.Text = "Pagamento:";
             lblPagamento.Click += lblPagamento_Click;
             // 
             // txtTroco
             // 
-            txtTroco.Font = new Font("Inter Medium", 7.8F, FontStyle.Bold);
+            txtTroco.Font = new Font("Inter", 8.25F);
             txtTroco.Location = new Point(427, 323);
             txtTroco.Name = "txtTroco";
-            txtTroco.Size = new Size(107, 23);
+            txtTroco.Size = new Size(107, 21);
             txtTroco.TabIndex = 20;
             // 
             // cmbViagem
             // 
-            cmbViagem.Font = new Font("Inter Medium", 7.8F, FontStyle.Bold);
+            cmbViagem.Font = new Font("Inter", 8.25F);
             cmbViagem.FormattingEnabled = true;
             cmbViagem.Items.AddRange(new object[] { "SIM", "NÃO" });
             cmbViagem.Location = new Point(428, 207);
             cmbViagem.Name = "cmbViagem";
-            cmbViagem.Size = new Size(106, 26);
+            cmbViagem.Size = new Size(106, 24);
             cmbViagem.TabIndex = 21;
             // 
             // lblViagem
             // 
             lblViagem.AutoSize = true;
-            lblViagem.Font = new Font("Inter", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblViagem.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             lblViagem.Location = new Point(334, 211);
             lblViagem.Name = "lblViagem";
-            lblViagem.Size = new Size(71, 22);
+            lblViagem.Size = new Size(57, 17);
             lblViagem.TabIndex = 22;
             lblViagem.Text = "Viagem:";
             lblViagem.Click += lblViagem_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 17F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(914, 510);
+            ClientSize = new Size(918, 722);
             Controls.Add(lblViagem);
             Controls.Add(cmbViagem);
             Controls.Add(txtTroco);

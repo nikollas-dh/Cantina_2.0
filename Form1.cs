@@ -15,7 +15,6 @@ namespace Cantina_2._0
 
             carrinho = new Carrinho();
 
-
             listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, });
             listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, });
             listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, });
@@ -82,7 +81,25 @@ namespace Cantina_2._0
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
-        {
+        {   
+            if(listBox2.Items.Count<=0)
+            {
+                MessageBox.Show("Escolha os itens no cardápio:");
+                return;
+            }
+            if (txtNome.Text == "")
+            {
+                MessageBox.Show("Insira o nome:");
+                return;
+            }
+
+            if (cmbViagem.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione o SIM ou NÃO para o status da viagem! ");
+                return;
+            }
+
+
             if (comboBoxPagamento.SelectedItem is Pagamento pagamento)
             {
                 if (pagamento.FormaPagamento == "Dinheiro")
@@ -111,7 +128,7 @@ namespace Cantina_2._0
                 }
                 if (cmbViagem.SelectedItem == "SIM")
                 {
-                    listBox2.Items.Add("Para Viagem");
+                    listBox2.Items.Add("*Para Viagem*");
                 }
             }
             else if (comboBoxPagamento.SelectedItem == null)
@@ -119,14 +136,18 @@ namespace Cantina_2._0
                 MessageBox.Show("Selecione uma forma de pagamento.");
                 return;
             }
-            if (cmbViagem.SelectedItem == null)
+
+            comboBoxPagamento.SelectedIndex = -1;
+            cmbViagem.SelectedIndex = -1;
+
+            string extrato = "";
+            foreach (var item in listBox2.Items)
             {
-                MessageBox.Show("Selecione o SIM ou NÃO para o status da viagem! ");
-                return;
+                extrato += item.ToString() + "\n";
             }
 
+            MessageBox.Show($"{txtNome.Text}Itens:\n\n{extrato}\nTotal do pedido: R$ {carrinho.Total():F2}", "Extrato");
 
-            MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
             carrinho.Limpar();
             listBox2.Items.Clear();
             txtNome.Clear();
