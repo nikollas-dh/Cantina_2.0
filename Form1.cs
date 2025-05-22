@@ -8,14 +8,13 @@ namespace Cantina_2._0
         private Carrinho carrinho;
 
 
+
         public Form1()
         {
             InitializeComponent();
 
             carrinho = new Carrinho();
-            listBox1.DataSource = produtos;
-            listBox1.DisplayMember = "Nome";
-            listBox1.ValueMember = "Preco";
+
 
             listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, });
             listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, });
@@ -42,6 +41,8 @@ namespace Cantina_2._0
             lblValor.Visible = false;
             lblTroco.Visible = false;
             txtTroco.Visible = false;
+
+
 
         }
 
@@ -94,7 +95,6 @@ namespace Cantina_2._0
                         {
                             double troco = valorPago - valorTotal;
                             txtTroco.Text = troco.ToString("C");
-                            MessageBox.Show($"Troco: {troco:C}", "Troco");
                         }
                         else
                         {
@@ -109,11 +109,23 @@ namespace Cantina_2._0
                         return;
                     }
                 }
-                if (cmbViagem.SelectedItem == "SIM") 
-                { 
-                listBox2.Items.Add("Para Viagem");
+                if (cmbViagem.SelectedItem == "SIM")
+                {
+                    listBox2.Items.Add("Para Viagem");
                 }
             }
+            else if (comboBoxPagamento.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma forma de pagamento.");
+                return;
+            }
+            if (cmbViagem.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione o SIM ou NÃO para o status da viagem! ");
+                return;
+            }
+
+
             MessageBox.Show($"Total do pedido: R$ {carrinho.Total():F2}", "Pedido Finalizado");
             carrinho.Limpar();
             listBox2.Items.Clear();
@@ -162,6 +174,26 @@ namespace Cantina_2._0
         }
 
         private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblViagem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPagamento_Click(object sender, EventArgs e)
         {
 
         }
