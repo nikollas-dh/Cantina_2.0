@@ -2,18 +2,16 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace Cantina_2._0
 {
-    public partial class Form1 : Form
+    public partial class Vendas : Form
     {
         private List<Produto> produtos;
-        private Carrinho carrinho;
+        private Pedido carrinho;
 
-
-
-        public Form1()
+        public Vendas()
         {
             InitializeComponent();
 
-            carrinho = new Carrinho();
+            carrinho = new Pedido();
 
             listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, });
             listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, });
@@ -40,9 +38,6 @@ namespace Cantina_2._0
             lblValor.Visible = false;
             lblTroco.Visible = false;
             txtTroco.Visible = false;
-
-
-
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -65,11 +60,6 @@ namespace Cantina_2._0
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRemover_Click(object sender, EventArgs e)
         {
             if (listBox2.SelectedItem is Produto produto)
@@ -81,8 +71,8 @@ namespace Cantina_2._0
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
-        {   
-            if(listBox2.Items.Count<=0)
+        {
+            if (listBox2.Items.Count <= 0)
             {
                 MessageBox.Show("Escolha os itens no cardápio:");
                 return;
@@ -162,22 +152,6 @@ namespace Cantina_2._0
             lblTotal.Text = $"R${carrinho.Total():F2}";
         }
 
-        private void lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NumQuantidade_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void comboBoxPagamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool dinheiro = comboBoxPagamento.SelectedItem?.ToString() == "Dinheiro";
@@ -189,34 +163,10 @@ namespace Cantina_2._0
             lblTroco.Visible = dinheiro;
         }
 
-        private void lblValor_Click(object sender, EventArgs e)
+        private void btnBalcao_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblTotal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblViagem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPagamento_Click(object sender, EventArgs e)
-        {
-
+            Balcão minhaNovaJanela = new Balcão(); // Criando uma instância da janela Balcao
+            minhaNovaJanela.Show(); // Exibindo a nova janela sem bloquear a princip
         }
     }
 }

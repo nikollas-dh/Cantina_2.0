@@ -1,6 +1,6 @@
 ﻿namespace Cantina_2._0
 {
-    partial class Form1
+    partial class Vendas
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vendas));
             listBox1 = new ListBox();
             listBox2 = new ListBox();
             btnAdicionar = new Button();
@@ -50,6 +50,7 @@
             txtTroco = new TextBox();
             cmbViagem = new ComboBox();
             lblViagem = new Label();
+            btnBalcao = new Button();
             ((System.ComponentModel.ISupportInitialize)NumQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -62,9 +63,8 @@
             listBox1.FormattingEnabled = true;
             listBox1.Location = new Point(33, 166);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(276, 146);
+            listBox1.Size = new Size(276, 178);
             listBox1.TabIndex = 0;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // listBox2
             // 
@@ -73,7 +73,7 @@
             listBox2.FormattingEnabled = true;
             listBox2.Location = new Point(623, 163);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(265, 148);
+            listBox2.Size = new Size(265, 180);
             listBox2.TabIndex = 1;
             // 
             // btnAdicionar
@@ -118,11 +118,10 @@
             // NumQuantidade
             // 
             NumQuantidade.Font = new Font("Inter", 8.25F);
-            NumQuantidade.Location = new Point(33, 338);
+            NumQuantidade.Location = new Point(33, 366);
             NumQuantidade.Name = "NumQuantidade";
             NumQuantidade.Size = new Size(137, 21);
             NumQuantidade.TabIndex = 5;
-            NumQuantidade.ValueChanged += NumQuantidade_ValueChanged;
             // 
             // lblCardápio
             // 
@@ -133,7 +132,6 @@
             lblCardápio.Size = new Size(138, 24);
             lblCardápio.TabIndex = 6;
             lblCardápio.Text = "🍔Cardápio🍔";
-            lblCardápio.Click += label1_Click;
             // 
             // lbl
             // 
@@ -144,7 +142,6 @@
             lbl.Size = new Size(152, 27);
             lbl.TabIndex = 7;
             lbl.Text = "\U0001f6d2 Carrinho\U0001f6d2";
-            lbl.Click += lbl_Click;
             // 
             // total
             // 
@@ -165,7 +162,6 @@
             lblTotal.Size = new Size(65, 22);
             lblTotal.TabIndex = 9;
             lblTotal.Text = "R$0,00";
-            lblTotal.Click += lblTotal_Click;
             // 
             // pictureBox1
             // 
@@ -176,7 +172,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // comboBoxPagamento
             // 
@@ -205,7 +200,6 @@
             lblValor.Size = new Size(42, 17);
             lblValor.TabIndex = 14;
             lblValor.Text = "Valor:";
-            lblValor.Click += lblValor_Click;
             // 
             // lblTroco
             // 
@@ -234,7 +228,6 @@
             lblNome.Size = new Size(46, 17);
             lblNome.TabIndex = 18;
             lblNome.Text = "Nome:";
-            lblNome.Click += lblNome_Click;
             // 
             // lblPagamento
             // 
@@ -245,7 +238,6 @@
             lblPagamento.Size = new Size(78, 17);
             lblPagamento.TabIndex = 19;
             lblPagamento.Text = "Pagamento:";
-            lblPagamento.Click += lblPagamento_Click;
             // 
             // txtTroco
             // 
@@ -274,14 +266,26 @@
             lblViagem.Size = new Size(57, 17);
             lblViagem.TabIndex = 22;
             lblViagem.Text = "Viagem:";
-            lblViagem.Click += lblViagem_Click;
             // 
-            // Form1
+            // btnBalcao
+            // 
+            btnBalcao.BackColor = Color.FromArgb(202, 196, 183);
+            btnBalcao.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
+            btnBalcao.Location = new Point(737, 42);
+            btnBalcao.Name = "btnBalcao";
+            btnBalcao.Size = new Size(95, 42);
+            btnBalcao.TabIndex = 23;
+            btnBalcao.Text = "Balcão";
+            btnBalcao.UseVisualStyleBackColor = false;
+            btnBalcao.Click += btnBalcao_Click;
+            // 
+            // Vendas
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(918, 722);
+            Controls.Add(btnBalcao);
             Controls.Add(lblViagem);
             Controls.Add(cmbViagem);
             Controls.Add(txtTroco);
@@ -304,7 +308,7 @@
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
             Font = new Font("Microsoft Sans Serif", 8.25F);
-            Name = "Form1";
+            Name = "Vendas";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)NumQuantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -335,5 +339,6 @@
         private Label lblTroco;
         private ComboBox cmbViagem;
         private Label lblViagem;
+        private Button btnBalcao;
     }
 }
