@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Cantina_2._0
 {
-    internal class Pedido
+    internal class Cardapio
     {
         public string Nome { get; set; }
-        public string Produto { get; set; }
         public double Preco { get; set; }
         public int Quantidade { get; set; }
         
@@ -20,11 +19,11 @@ namespace Cantina_2._0
 
             if (Quantidade > 0)
             {
-                return $"{Quantidade}x {Produto} R${Preco:F2}";
+                return $"{Quantidade}x {Nome} R${Preco:F2}";
             }
             else
             {
-                return $"{Produto} R${Preco:F2}";
+                return $"{Nome} R${Preco:F2}";
             }
 
             

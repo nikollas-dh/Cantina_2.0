@@ -18,20 +18,20 @@ namespace Cantina_2._0
         }
     }
 
-    internal class Escolha
-    {
-        private List<Pedido> itens = new List<Pedido>();
+    //internal class Escolha
+    //{
+    //    private List<Pedido> itens = new List<Pedido>();
 
-        public void AdicionarPagamento(Pedido pagamento)
-        {
-            itens.Add(pagamento);
-        }
+    //    public void AdicionarPagamento(Pedido pagamento)
+    //    {
+    //        itens.Add(pagamento);
+    //    }
 
-        public List<Pedido> ObterPagamentos()
-        {
-            return itens;
-        }
-    }
+    //    public List<Pedido> ObterPagamentos()
+    //    {
+    //        return itens;
+    //    }
+    //}
 
 
 }

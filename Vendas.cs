@@ -4,32 +4,35 @@ namespace Cantina_2._0
 {
     public partial class Vendas : Form
     {
-        private List<Pedido> pedido;
+        private List<Cardapio> pedidos;
+
+        private List<Cardapio> produtos;
         private Carrinho carrinho;
 
         public Vendas()
         {
             InitializeComponent();
 
+
             carrinho = new Carrinho();
 
-            listBox1.Items.Add(new Pedido { Produto = "Pão de Queijo", Preco = 3.50, });
-            listBox1.Items.Add(new Pedido { Produto = "Coxinha", Preco = 5, });
-            listBox1.Items.Add(new Pedido { Produto = "Pastel de Carne", Preco = 6, });
-            listBox1.Items.Add(new Pedido { Produto = "Pastel de Queijo", Preco = 5.5, });
-            listBox1.Items.Add(new Pedido { Produto = "Suco Natural (300ml)", Preco = 4, });
-            listBox1.Items.Add(new Pedido { Produto = "Refrigerante Lata", Preco = 4.5, });
-            listBox1.Items.Add(new Pedido { Produto = "Hamburguer Simples", Preco = 8, });
-            listBox1.Items.Add(new Pedido { Produto = "Hamburguer com Queijo", Preco = 9, });
-            listBox1.Items.Add(new Pedido { Produto = "X-Bacon", Preco = 12, });
-            listBox1.Items.Add(new Pedido { Produto = "X-Tudo", Preco = 15, });
-            listBox1.Items.Add(new Pedido { Produto = "Água Mineral (500ml)", Preco = 2.5, });
+            listBox1.Items.Add(new Cardapio { Nome = "Pão de Queijo", Preco = 3.50, });
+            listBox1.Items.Add(new Cardapio { Nome = "Coxinha", Preco = 5, });
+            listBox1.Items.Add(new Cardapio { Nome = "Pastel de Carne", Preco = 6, });
+            listBox1.Items.Add(new Cardapio { Nome = "Pastel de Queijo", Preco = 5.5, });
+            listBox1.Items.Add(new Cardapio { Nome = "Suco Natural (300ml)", Preco = 4, });
+            listBox1.Items.Add(new Cardapio { Nome = "Refrigerante Lata", Preco = 4.5, });
+            listBox1.Items.Add(new Cardapio { Nome = "Hamburguer Simples", Preco = 8, });
+            listBox1.Items.Add(new Cardapio { Nome = "Hamburguer com Queijo", Preco = 9, });
+            listBox1.Items.Add(new Cardapio { Nome = "X-Bacon", Preco = 12, });
+            listBox1.Items.Add(new Cardapio { Nome = "X-Tudo", Preco = 15, });
+            listBox1.Items.Add(new Cardapio { Nome = "Água Mineral (500ml)", Preco = 2.5, });
 
 
             NumQuantidade.Minimum = 1;
             NumQuantidade.Maximum = 10;
 
-            Escolha escolha = new Escolha();
+            // Escolha escolha = new Escolha();
             comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Pix" });
             comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Dinheiro" });
             comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Débito" });
@@ -42,13 +45,13 @@ namespace Cantina_2._0
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem is Pedido produtoSelecionado)
+            if (listBox1.SelectedItem is Cardapio produtoSelecionado)
             {
                 int quantidade = (int)NumQuantidade.Value;
 
-                var novoPedido = new Pedido
+                var novoPedido = new Cardapio
                 {
-                    Produto = produtoSelecionado.Produto,
+                    Nome = produtoSelecionado.Nome,
                     Preco = produtoSelecionado.Preco * quantidade,
                     Quantidade = quantidade
 
@@ -62,7 +65,7 @@ namespace Cantina_2._0
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedItem is Pedido produto)
+            if (listBox2.SelectedItem is Cardapio produto)
             {
                 carrinho.Remover(produto);
                 listBox2.Items.Remove(produto);
@@ -131,12 +134,18 @@ namespace Cantina_2._0
             cmbViagem.SelectedIndex = -1;
 
             string extrato = "";
-            foreach (var item in listBox2.Items)
+            foreach (var item in carrinho.Listar())
             {
                 extrato += item.ToString() + "\n";
             }
-           Pedido pedido = new Pedido { Nome = txtNome.Text };
-            MessageBox.Show($"{pedido.Nome}Itens:\n\n{extrato}\nTotal do pedido: R$ {carrinho.Total():F2}", "Extrato");
+            var pedidoCompleto = new PedidoCompleto(txtNome.Text, carrinho.Listar());
+            string mensagem = 
+
+            $"Cliente: {pedidoCompleto.NomeCliente}\n" +
+            $"Hora do pedido: {pedidoCompleto.HoraPedido:dd/MM/yyyy HH:mm}\n\n" +
+            $"Itens:\n{extrato}\n" +
+            $"Total do pedido: R$ {carrinho.Total():F2}";
+            MessageBox.Show(mensagem, "Extrato");
 
             carrinho.Limpar();
             listBox2.Items.Clear();
