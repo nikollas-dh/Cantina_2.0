@@ -20,14 +20,14 @@ namespace Cantina_2._0
 
     internal class Escolha
     {
-        private List<Pagamento> itens = new List<Pagamento>();
+        private List<Pedido> itens = new List<Pedido>();
 
-        public void AdicionarPagamento(Pagamento pagamento)
+        public void AdicionarPagamento(Pedido pagamento)
         {
             itens.Add(pagamento);
         }
 
-        public List<Pagamento> ObterPagamentos()
+        public List<Pedido> ObterPagamentos()
         {
             return itens;
         }

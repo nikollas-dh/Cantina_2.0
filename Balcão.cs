@@ -19,7 +19,12 @@ namespace Cantina_2._0
 
         private void btnEntregue_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void lbxProntos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

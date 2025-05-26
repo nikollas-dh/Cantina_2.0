@@ -7,20 +7,28 @@ using System.Threading.Tasks;
 
 namespace Cantina_2._0
 {
-    internal class Produto
+    internal class Pedido
     {
         public string Nome { get; set; }
+        public string Produto { get; set; }
         public double Preco { get; set; }
-        public int Quantidade { get; set; } 
+        public int Quantidade { get; set; }
         
 
         public override string ToString()
         {
 
             if (Quantidade > 0)
-                return $"{Quantidade}x {Nome} R${Preco:F2}";
+            {
+                return $"{Quantidade}x {Produto} R${Preco:F2}";
+            }
             else
-            return $"{Nome} R${Preco:F2}";
+            {
+                return $"{Produto} R${Preco:F2}";
+            }
+
+            
+
         }
 
     }

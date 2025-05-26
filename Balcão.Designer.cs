@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Balcão));
-            lbxEntregues = new ListBox();
-            lbxProntos = new ListBox();
+            listbox2 = new ListBox();
+            listbox1 = new ListBox();
             pictureBox1 = new PictureBox();
             btnEntregue = new Button();
             lblEntregue = new Label();
@@ -40,31 +40,32 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // lbxEntregues
+            // listbox2
             // 
-            lbxEntregues.Enabled = false;
-            lbxEntregues.Font = new Font("Inter", 8.25F);
-            lbxEntregues.FormattingEnabled = true;
-            lbxEntregues.Location = new Point(38, 378);
-            lbxEntregues.Name = "lbxEntregues";
-            lbxEntregues.Size = new Size(634, 180);
-            lbxEntregues.TabIndex = 0;
+            listbox2.Enabled = false;
+            listbox2.Font = new Font("Inter", 8.25F);
+            listbox2.FormattingEnabled = true;
+            listbox2.Location = new Point(38, 378);
+            listbox2.Name = "listbox2";
+            listbox2.Size = new Size(634, 180);
+            listbox2.TabIndex = 0;
             // 
-            // lbxProntos
+            // listbox1
             // 
-            lbxProntos.Font = new Font("Inter", 8.25F);
-            lbxProntos.FormattingEnabled = true;
-            lbxProntos.Location = new Point(38, 98);
-            lbxProntos.Name = "lbxProntos";
-            lbxProntos.Size = new Size(634, 228);
-            lbxProntos.TabIndex = 1;
+            listbox1.Font = new Font("Inter", 8.25F);
+            listbox1.FormattingEnabled = true;
+            listbox1.Location = new Point(38, 98);
+            listbox1.Name = "listbox1";
+            listbox1.Size = new Size(634, 228);
+            listbox1.TabIndex = 1;
+            listbox1.SelectedIndexChanged += lbxProntos_SelectedIndexChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(47, -56);
+            pictureBox1.Location = new Point(50, -69);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(188, 184);
+            pictureBox1.Size = new Size(188, 201);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -84,7 +85,6 @@
             // lblEntregue
             // 
             lblEntregue.AutoSize = true;
-            lblEntregue.Enabled = false;
             lblEntregue.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEntregue.Location = new Point(38, 343);
             lblEntregue.Name = "lblEntregue";
@@ -105,7 +105,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.raio__1_;
-            pictureBox2.Location = new Point(38, 25);
+            pictureBox2.Location = new Point(38, 21);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(46, 20);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -122,8 +122,8 @@
             Controls.Add(lblProntos);
             Controls.Add(lblEntregue);
             Controls.Add(btnEntregue);
-            Controls.Add(lbxProntos);
-            Controls.Add(lbxEntregues);
+            Controls.Add(listbox1);
+            Controls.Add(listbox2);
             Controls.Add(pictureBox1);
             Name = "Balcão";
             Text = "Balcão";
@@ -135,8 +135,8 @@
 
         #endregion
 
-        private ListBox lbxEntregues;
-        private ListBox lbxProntos;
+        private ListBox listbox2;
+        private ListBox listbox1;
         private PictureBox pictureBox1;
         private Button btnEntregue;
         private Label lblEntregue;
