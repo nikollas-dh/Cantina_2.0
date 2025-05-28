@@ -45,18 +45,18 @@
             listbox2.Enabled = false;
             listbox2.Font = new Font("Inter", 8.25F);
             listbox2.FormattingEnabled = true;
-            listbox2.Location = new Point(38, 378);
+            listbox2.Location = new Point(38, 344);
             listbox2.Name = "listbox2";
-            listbox2.Size = new Size(634, 180);
+            listbox2.Size = new Size(634, 164);
             listbox2.TabIndex = 0;
             // 
             // listbox1
             // 
             listbox1.Font = new Font("Inter", 8.25F);
             listbox1.FormattingEnabled = true;
-            listbox1.Location = new Point(38, 98);
+            listbox1.Location = new Point(38, 108);
             listbox1.Name = "listbox1";
-            listbox1.Size = new Size(634, 228);
+            listbox1.Size = new Size(634, 164);
             listbox1.TabIndex = 1;
             listbox1.SelectedIndexChanged += lbxProntos_SelectedIndexChanged;
             // 
@@ -74,9 +74,9 @@
             // 
             btnEntregue.BackColor = Color.FromArgb(202, 196, 183);
             btnEntregue.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
-            btnEntregue.Location = new Point(735, 98);
+            btnEntregue.Location = new Point(734, 108);
             btnEntregue.Name = "btnEntregue";
-            btnEntregue.Size = new Size(107, 47);
+            btnEntregue.Size = new Size(145, 54);
             btnEntregue.TabIndex = 12;
             btnEntregue.Text = "Entregue";
             btnEntregue.UseVisualStyleBackColor = false;
@@ -86,7 +86,7 @@
             // 
             lblEntregue.AutoSize = true;
             lblEntregue.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEntregue.Location = new Point(38, 343);
+            lblEntregue.Location = new Point(38, 305);
             lblEntregue.Name = "lblEntregue";
             lblEntregue.Size = new Size(154, 23);
             lblEntregue.TabIndex = 13;
@@ -117,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(919, 574);
+            ClientSize = new Size(915, 541);
             Controls.Add(pictureBox2);
             Controls.Add(lblProntos);
             Controls.Add(lblEntregue);

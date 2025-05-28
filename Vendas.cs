@@ -33,9 +33,9 @@ namespace Cantina_2._0
             NumQuantidade.Maximum = 10;
 
             // Escolha escolha = new Escolha();
-            comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Pix" });
-            comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Dinheiro" });
-            comboBoxPagamento.Items.Add(new Pagamento { FormaPagamento = "Débito" });
+            comboBoxPagamento.Items.Add("Pix" );
+            comboBoxPagamento.Items.Add("Dinheiro" );
+            comboBoxPagamento.Items.Add("Débito");
 
             txtValorPago.Visible = false;
             lblValor.Visible = false;
@@ -93,10 +93,10 @@ namespace Cantina_2._0
             }
 
 
-            if (comboBoxPagamento.SelectedItem is Pagamento pagamento)
+            if (comboBoxPagamento.SelectedItem is string formaPagamento)
             {
-                if (pagamento.FormaPagamento == "Dinheiro")
-                {
+                if (formaPagamento == "Dinheiro")
+                    {
                     double valorTotal = carrinho.Total();
                     double valorPago;
                     if (double.TryParse(txtValorPago.Text, out valorPago))
@@ -124,28 +124,33 @@ namespace Cantina_2._0
                     listBox2.Items.Add("*Para Viagem*");
                 }
             }
-            else if (comboBoxPagamento.SelectedItem == null)
+            if (comboBoxPagamento.SelectedItem == null)
             {
                 MessageBox.Show("Selecione uma forma de pagamento.");
                 return;
             }
+        
 
-            comboBoxPagamento.SelectedIndex = -1;
-            cmbViagem.SelectedIndex = -1;
+            string formaPagamento = comboBoxPagamento.SelectedItem.ToString(); // erro
 
             string extrato = "";
             foreach (var item in carrinho.Listar())
             {
                 extrato += item.ToString() + "\n";
             }
-            var pedidoCompleto = new PedidoCompleto(txtNome.Text, carrinho.Listar());
-            string mensagem = 
 
-            $"Cliente: {pedidoCompleto.NomeCliente}\n" +
-            $"Hora do pedido: {pedidoCompleto.HoraPedido:dd/MM/yyyy HH:mm}\n\n" +
-            $"Itens:\n{extrato}\n" +
-            $"Total do pedido: R$ {carrinho.Total():F2}";
+            var pedidoCompleto = new PedidoCompleto(txtNome.Text, carrinho.Listar(), formaPagamento); // erro
+
+            string mensagem =
+                $"Cliente: {pedidoCompleto.NomeCliente}\n" +
+                $"Hora do pedido: {pedidoCompleto.HoraPedido:dd/MM/yyyy HH:mm}\n" +
+                $"Pagamento: {pedidoCompleto.FormaPagamento}\n" +
+                $"Itens:\n{extrato}\n" +
+                $"Total do pedido: R$ {carrinho.Total():F2}";
+
             MessageBox.Show(mensagem, "Extrato");
+
+
 
             carrinho.Limpar();
             listBox2.Items.Clear();

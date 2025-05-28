@@ -8,15 +8,15 @@ using System.Collections.Generic;
 
 namespace Cantina_2._0
 {
-    internal class Pagamento
-    {
-        public string FormaPagamento { get; set; }
+    //internal class Pagamento
+    //{
+    //    public string FormaPagamento { get; set; }
 
-        public override string ToString()
-        {
-            return $"{FormaPagamento}" ;
-        }
-    }
+    //    public override string ToString()
+    //    {
+    //        return $"{FormaPagamento}" ;
+    //    }
+    //}
 
     //internal class Escolha
     //{
