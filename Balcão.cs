@@ -12,9 +12,15 @@ namespace Cantina_2._0
 {
     public partial class Balcão : Form
     {
+
+        private List<Pedido> pedidos;
+
         public Balcão()
         {
             InitializeComponent();
+           
+           listBox1.Items.Add(new PedidosBalcao);
+
         }
 
         private void btnEntregue_Click(object sender, EventArgs e)
@@ -22,9 +28,6 @@ namespace Cantina_2._0
 
         }
 
-        private void lbxProntos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

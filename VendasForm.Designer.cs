@@ -1,6 +1,6 @@
 ﻿namespace Cantina_2._0
 {
-    partial class Vendas
+    partial class VendasForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vendas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendasForm));
             listBox1 = new ListBox();
             listBox2 = new ListBox();
             btnAdicionar = new Button();

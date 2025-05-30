@@ -8,13 +8,13 @@ namespace Cantina_2._0
 {
     internal class Carrinho
     {
-        private List<Cardapio> itens = new List<Cardapio>();
+        private List<Produto> itens = new List<Produto>();
 
-        public void Adicionar(Cardapio produto) => itens.Add(produto);
-        public void Remover(Cardapio produto) => itens.Remove(produto);
+        public void Adicionar(Produto produto) => itens.Add(produto);
+        public void Remover(Produto produto) => itens.Remove(produto);
 
         public double Total() => itens.Sum(p => p.Preco);
-        public List<Cardapio> Listar() => new List<Cardapio>(itens);
+        public List<Produto> Listar() => new List<Produto>(itens);
         public void Limpar() => itens.Clear();
 
         

@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Balcão));
             listbox2 = new ListBox();
-            listbox1 = new ListBox();
             pictureBox1 = new PictureBox();
             btnEntregue = new Button();
             lblEntregue = new Label();
             lblProntos = new Label();
             pictureBox2 = new PictureBox();
+            listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -49,16 +49,6 @@
             listbox2.Name = "listbox2";
             listbox2.Size = new Size(634, 164);
             listbox2.TabIndex = 0;
-            // 
-            // listbox1
-            // 
-            listbox1.Font = new Font("Inter", 8.25F);
-            listbox1.FormattingEnabled = true;
-            listbox1.Location = new Point(38, 108);
-            listbox1.Name = "listbox1";
-            listbox1.Size = new Size(634, 164);
-            listbox1.TabIndex = 1;
-            listbox1.SelectedIndexChanged += lbxProntos_SelectedIndexChanged;
             // 
             // pictureBox1
             // 
@@ -74,7 +64,7 @@
             // 
             btnEntregue.BackColor = Color.FromArgb(202, 196, 183);
             btnEntregue.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
-            btnEntregue.Location = new Point(734, 108);
+            btnEntregue.Location = new Point(731, 115);
             btnEntregue.Name = "btnEntregue";
             btnEntregue.Size = new Size(145, 54);
             btnEntregue.TabIndex = 12;
@@ -112,17 +102,26 @@
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(38, 115);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(634, 169);
+            listBox1.TabIndex = 16;
+            // 
             // Balcão
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(915, 541);
+            Controls.Add(listBox1);
             Controls.Add(pictureBox2);
             Controls.Add(lblProntos);
             Controls.Add(lblEntregue);
             Controls.Add(btnEntregue);
-            Controls.Add(listbox1);
             Controls.Add(listbox2);
             Controls.Add(pictureBox1);
             Name = "Balcão";
@@ -136,11 +135,11 @@
         #endregion
 
         private ListBox listbox2;
-        private ListBox listbox1;
         private PictureBox pictureBox1;
         private Button btnEntregue;
         private Label lblEntregue;
         private Label lblProntos;
         private PictureBox pictureBox2;
+        private ListBox listBox1;
     }
 }

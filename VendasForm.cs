@@ -2,37 +2,36 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace Cantina_2._0
 {
-    public partial class Vendas : Form
+    public partial class VendasForm : Form
     {
-        private List<Cardapio> pedidos;
-
-        private List<Cardapio> produtos;
+        private List<Produto> Itens;
+        
+       
         private Carrinho carrinho;
 
-        public Vendas()
+        public VendasForm()
         {
             InitializeComponent();
 
 
             carrinho = new Carrinho();
 
-            listBox1.Items.Add(new Cardapio { Nome = "Pão de Queijo", Preco = 3.50, });
-            listBox1.Items.Add(new Cardapio { Nome = "Coxinha", Preco = 5, });
-            listBox1.Items.Add(new Cardapio { Nome = "Pastel de Carne", Preco = 6, });
-            listBox1.Items.Add(new Cardapio { Nome = "Pastel de Queijo", Preco = 5.5, });
-            listBox1.Items.Add(new Cardapio { Nome = "Suco Natural (300ml)", Preco = 4, });
-            listBox1.Items.Add(new Cardapio { Nome = "Refrigerante Lata", Preco = 4.5, });
-            listBox1.Items.Add(new Cardapio { Nome = "Hamburguer Simples", Preco = 8, });
-            listBox1.Items.Add(new Cardapio { Nome = "Hamburguer com Queijo", Preco = 9, });
-            listBox1.Items.Add(new Cardapio { Nome = "X-Bacon", Preco = 12, });
-            listBox1.Items.Add(new Cardapio { Nome = "X-Tudo", Preco = 15, });
-            listBox1.Items.Add(new Cardapio { Nome = "Água Mineral (500ml)", Preco = 2.5, });
+            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, });
+            listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.5, });
+            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300ml)", Preco = 4, });
+            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.5, });
+            listBox1.Items.Add(new Produto { Nome = "Hamburguer Simples", Preco = 8, });
+            listBox1.Items.Add(new Produto { Nome = "Hamburguer com Queijo", Preco = 9, });
+            listBox1.Items.Add(new Produto { Nome = "X-Bacon", Preco = 12, });
+            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 15, });
+            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml)", Preco = 2.5, });
 
 
             NumQuantidade.Minimum = 1;
             NumQuantidade.Maximum = 10;
 
-            // Escolha escolha = new Escolha();
             comboBoxPagamento.Items.Add("Pix" );
             comboBoxPagamento.Items.Add("Dinheiro" );
             comboBoxPagamento.Items.Add("Débito");
@@ -45,11 +44,11 @@ namespace Cantina_2._0
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem is Cardapio produtoSelecionado)
+            if (listBox1.SelectedItem is Produto produtoSelecionado)
             {
                 int quantidade = (int)NumQuantidade.Value;
 
-                var novoPedido = new Cardapio
+                var novoPedido = new Produto
                 {
                     Nome = produtoSelecionado.Nome,
                     Preco = produtoSelecionado.Preco * quantidade,
@@ -65,7 +64,7 @@ namespace Cantina_2._0
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedItem is Cardapio produto)
+            if (listBox2.SelectedItem is Produto produto)
             {
                 carrinho.Remover(produto);
                 listBox2.Items.Remove(produto);
@@ -91,47 +90,43 @@ namespace Cantina_2._0
                 MessageBox.Show("Selecione o SIM ou NÃO para o status da viagem! ");
                 return;
             }
-
-
-            if (comboBoxPagamento.SelectedItem is string formaPagamento)
-            {
-                if (formaPagamento == "Dinheiro")
-                    {
-                    double valorTotal = carrinho.Total();
-                    double valorPago;
-                    if (double.TryParse(txtValorPago.Text, out valorPago))
-                    {
-                        if (valorPago >= valorTotal)
-                        {
-                            double troco = valorPago - valorTotal;
-                            txtTroco.Text = troco.ToString("C");
-                        }
-                        else
-                        {
-                            double falta = valorTotal - valorPago;
-                            MessageBox.Show($"Valor insuficiente. Faltam {falta:C}.", "Aviso");
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Digite apenas valores válidos");
-                        return;
-                    }
-                }
-                if (cmbViagem.SelectedItem == "SIM")
-                {
-                    listBox2.Items.Add("*Para Viagem*");
-                }
-            }
             if (comboBoxPagamento.SelectedItem == null)
             {
                 MessageBox.Show("Selecione uma forma de pagamento.");
                 return;
             }
-        
+            
+            string formaPagamento = comboBoxPagamento.SelectedItem.ToString();  
 
-            string formaPagamento = comboBoxPagamento.SelectedItem.ToString(); // erro
+            if (formaPagamento == "Dinheiro")
+            {
+                double valorTotal = carrinho.Total();
+                double valorPago;
+                if (double.TryParse(txtValorPago.Text, out valorPago))
+                {
+                    if (valorPago >= valorTotal)
+                    {
+                        double troco = valorPago - valorTotal;
+                        txtTroco.Text = troco.ToString("C");
+                    }
+                    else
+                    {
+                        double falta = valorTotal - valorPago;
+                        MessageBox.Show($"Valor insuficiente. Faltam {falta:C}.", "Aviso");
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Digite apenas valores válidos");
+                    return;
+                }
+
+                if (cmbViagem.SelectedItem == "SIM")
+                {
+                    listBox2.Items.Add("*Para Viagem*");
+                }
+            }
 
             string extrato = "";
             foreach (var item in carrinho.Listar())
@@ -139,12 +134,12 @@ namespace Cantina_2._0
                 extrato += item.ToString() + "\n";
             }
 
-            var pedidoCompleto = new PedidoCompleto(txtNome.Text, carrinho.Listar(), formaPagamento); // erro
+            Pedido pedido = new Pedido(txtNome.Text, carrinho.Listar(), formaPagamento); 
 
             string mensagem =
-                $"Cliente: {pedidoCompleto.NomeCliente}\n" +
-                $"Hora do pedido: {pedidoCompleto.HoraPedido:dd/MM/yyyy HH:mm}\n" +
-                $"Pagamento: {pedidoCompleto.FormaPagamento}\n" +
+                $"Cliente: {pedido.NomeCliente}\n" +
+                $"Hora do pedido: {pedido.HoraPedido:dd/MM/yyyy HH:mm}\n" +
+                $"Pagamento: {pedido.FormaPagamento}\n" +
                 $"Itens:\n{extrato}\n" +
                 $"Total do pedido: R$ {carrinho.Total():F2}";
 

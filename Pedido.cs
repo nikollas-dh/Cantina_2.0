@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace Cantina_2._0
 {
-    internal class PedidoCompleto
+    internal class Pedido
     {
         public string NomeCliente { get; set; }
-        public List<Cardapio> Itens { get; set; }
+        public List<Produto> Itens { get; set; }
         public DateTime HoraPedido { get; private set; }
         public string FormaPagamento { get; set; }
 
-        // essa é minha classe
-        public PedidoCompleto(string nomeCliente, List<Cardapio> itens, string formaPagamento)
+        public Pedido(string nomeCliente, List<Produto> itens, string formaPagamento)
         {
             NomeCliente = string.IsNullOrWhiteSpace(nomeCliente) ? "Cliente" : nomeCliente;
-            Itens = new List<Cardapio>(itens);
+            Itens = new List<Produto>(itens);
             HoraPedido = DateTime.Now;
             FormaPagamento = formaPagamento;
             

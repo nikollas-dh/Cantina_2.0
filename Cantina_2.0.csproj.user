@@ -4,7 +4,7 @@
     <Compile Update="Balcão.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vendas.cs">
+    <Compile Update="VendasForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
