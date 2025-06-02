@@ -25,9 +25,6 @@ namespace Cantina_2._0
             {
                 return $"{Nome} R${Preco:F2}";
             }
-
-            
-
         }
 
     }

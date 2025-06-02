@@ -1,6 +1,6 @@
 ﻿namespace Cantina_2._0
 {
-    partial class Balcão
+    partial class Balcao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Balcão));
-            listbox2 = new ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Balcao));
+            listBox2 = new ListBox();
             pictureBox1 = new PictureBox();
             btnEntregue = new Button();
             lblEntregue = new Label();
@@ -40,15 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // listbox2
+            // listBox2
             // 
-            listbox2.Enabled = false;
-            listbox2.Font = new Font("Inter", 8.25F);
-            listbox2.FormattingEnabled = true;
-            listbox2.Location = new Point(38, 344);
-            listbox2.Name = "listbox2";
-            listbox2.Size = new Size(634, 164);
-            listbox2.TabIndex = 0;
+            listBox2.Enabled = false;
+            listBox2.Font = new Font("Inter", 8.25F);
+            listBox2.FormattingEnabled = true;
+            listBox2.Location = new Point(38, 344);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(634, 164);
+            listBox2.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -111,7 +111,7 @@
             listBox1.Size = new Size(634, 169);
             listBox1.TabIndex = 16;
             // 
-            // Balcão
+            // Balcao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -122,10 +122,11 @@
             Controls.Add(lblProntos);
             Controls.Add(lblEntregue);
             Controls.Add(btnEntregue);
-            Controls.Add(listbox2);
+            Controls.Add(listBox2);
             Controls.Add(pictureBox1);
-            Name = "Balcão";
+            Name = "Balcao";
             Text = "Balcão";
+            Load += Balcao_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -134,7 +135,7 @@
 
         #endregion
 
-        private ListBox listbox2;
+        private ListBox listBox2;
         private PictureBox pictureBox1;
         private Button btnEntregue;
         private Label lblEntregue;

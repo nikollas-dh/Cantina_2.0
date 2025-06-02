@@ -137,7 +137,7 @@ namespace Cantina_2._0
             Pedido pedido = new Pedido(txtNome.Text, carrinho.Listar(), formaPagamento); 
 
             string mensagem =
-                $"Cliente: {pedido.NomeCliente}\n" +
+                $"{pedido.NomeCliente}\n" +
                 $"Hora do pedido: {pedido.HoraPedido:dd/MM/yyyy HH:mm}\n" +
                 $"Pagamento: {pedido.FormaPagamento}\n" +
                 $"Itens:\n{extrato}\n" +
@@ -145,6 +145,7 @@ namespace Cantina_2._0
 
             MessageBox.Show(mensagem, "Extrato");
 
+            PedidosBalcao.AdicionarPedido(pedido);
 
 
             carrinho.Limpar();
@@ -174,7 +175,7 @@ namespace Cantina_2._0
 
         private void btnBalcao_Click(object sender, EventArgs e)
         {
-            Balcão minhaNovaJanela = new Balcão(); // Criando uma instância da janela Balcao
+            Balcao minhaNovaJanela = new Balcao(); // Criando uma instância da janela Balcao
             minhaNovaJanela.Show(); // Exibindo a nova janela sem bloquear a princip
         }
     }
