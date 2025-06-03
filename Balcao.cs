@@ -20,30 +20,44 @@ namespace Cantina_2._0
 
         private void btnEntregue_Click(object sender, EventArgs e)
         {
-            string textoSelecionado = listBox1.SelectedItem.ToString();
             if (listBox1.SelectedItem != null)
             {
-                listBox1.Items.Remove(textoSelecionado);
-                listBox2.Items.Add($"{textoSelecionado} | Entregue");
+                string textoSelecionado = listBox1.SelectedItem.ToString();
 
-                if (listBox2.Items.Count > 5) 
+                // Encontra o pedido original
+                var pedidoParaRemover = PedidosBalcao.ObterPendentes()
+                    .FirstOrDefault(p => p.ToString() == textoSelecionado);
+
+                if (pedidoParaRemover != null)
                 {
-                    listBox2.Items.RemoveAt(0);
+                    PedidosBalcao.MarcarComoEntregue(pedidoParaRemover);
+
+                    listBox1.Items.Remove(textoSelecionado);
+                    listBox2.Items.Add($"{textoSelecionado} | Entregue");
+
+                    if (listBox2.Items.Count > 5)
+                        listBox2.Items.RemoveAt(0);
                 }
             }
-            else 
+            else
             {
-                MessageBox.Show("Selecione um Item:"); 
+                MessageBox.Show("Selecione um item para marcar como entregue.");
             }
         }
 
         private void Balcao_Load(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            listBox2.Items.Clear();
 
-            foreach (var pedido in PedidosBalcao.ObterPedidos())
+            foreach (var pedido in PedidosBalcao.ObterPendentes())
             {
                 listBox1.Items.Add(pedido.ToString());
+            }
+
+            foreach (var pedido in PedidosBalcao.ObterEntregues())
+            {
+                listBox2.Items.Add($"{pedido.ToString()} | Entregue");
             }
         }
     }
