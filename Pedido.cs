@@ -21,9 +21,16 @@ namespace Cantina_2._0
             FormaPagamento = formaPagamento;
             
         }
+        //public override string ToString()
+        //{
+        //    return $"Cliente: {NomeCliente} | Itens: {Itens.Count} | Hora: {HoraPedido:t} | Pagamento: {FormaPagamento}";
+        //}
+
         public override string ToString()
         {
-            return $"Cliente: {NomeCliente} | Itens: {Itens.Count} | Hora: {HoraPedido:t} | Pagamento: {FormaPagamento}";
+            string produtosTexto = string.Join(", ", Itens.Select(p => $"{p.Quantidade}x {p.Nome}"));
+            return $"{NomeCliente} | Produtos: {produtosTexto} | Hora: {HoraPedido:t} | Quantidade de itens: {Itens.Count} ";
         }
+
     }
 }

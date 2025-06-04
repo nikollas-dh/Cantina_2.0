@@ -47,7 +47,7 @@
             listBox2.FormattingEnabled = true;
             listBox2.Location = new Point(38, 344);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(634, 164);
+            listBox2.Size = new Size(786, 164);
             listBox2.TabIndex = 0;
             // 
             // pictureBox1
@@ -64,7 +64,7 @@
             // 
             btnEntregue.BackColor = Color.FromArgb(202, 196, 183);
             btnEntregue.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
-            btnEntregue.Location = new Point(731, 115);
+            btnEntregue.Location = new Point(830, 115);
             btnEntregue.Name = "btnEntregue";
             btnEntregue.Size = new Size(145, 54);
             btnEntregue.TabIndex = 12;
@@ -105,10 +105,11 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
+            listBox1.HorizontalScrollbar = true;
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(38, 115);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(634, 169);
+            listBox1.Size = new Size(786, 169);
             listBox1.TabIndex = 16;
             // 
             // Balcao
@@ -116,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(915, 541);
+            ClientSize = new Size(1035, 541);
             Controls.Add(listBox1);
             Controls.Add(pictureBox2);
             Controls.Add(lblProntos);
