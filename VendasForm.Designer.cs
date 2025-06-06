@@ -279,12 +279,12 @@
             btnBalcao.UseVisualStyleBackColor = false;
             btnBalcao.Click += btnBalcao_Click;
             // 
-            // Vendas
+            // VendasForm
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(918, 722);
+            ClientSize = new Size(1045, 722);
             Controls.Add(btnBalcao);
             Controls.Add(lblViagem);
             Controls.Add(cmbViagem);
@@ -308,7 +308,7 @@
             Controls.Add(listBox1);
             Controls.Add(pictureBox1);
             Font = new Font("Microsoft Sans Serif", 8.25F);
-            Name = "Vendas";
+            Name = "VendasForm";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)NumQuantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

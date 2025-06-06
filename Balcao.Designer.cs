@@ -54,9 +54,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(50, -69);
+            pictureBox1.Location = new Point(66, -96);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(188, 201);
+            pictureBox1.Size = new Size(247, 249);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -64,8 +64,8 @@
             // btnEntregue
             // 
             btnEntregue.BackColor = Color.FromArgb(202, 196, 183);
-            btnEntregue.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
-            btnEntregue.Location = new Point(830, 115);
+            btnEntregue.Font = new Font("Inter ExtraBold", 12F, FontStyle.Bold);
+            btnEntregue.Location = new Point(872, 115);
             btnEntregue.Name = "btnEntregue";
             btnEntregue.Size = new Size(145, 54);
             btnEntregue.TabIndex = 12;
@@ -76,29 +76,29 @@
             // lblEntregue
             // 
             lblEntregue.AutoSize = true;
-            lblEntregue.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEntregue.Location = new Point(38, 305);
+            lblEntregue.Font = new Font("Inter SemiBold", 14F, FontStyle.Bold);
+            lblEntregue.Location = new Point(38, 304);
             lblEntregue.Name = "lblEntregue";
-            lblEntregue.Size = new Size(154, 23);
+            lblEntregue.Size = new Size(185, 27);
             lblEntregue.TabIndex = 13;
             lblEntregue.Text = "Pedidos Retirados:";
             // 
             // lblProntos
             // 
             lblProntos.AutoSize = true;
-            lblProntos.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
+            lblProntos.Font = new Font("Inter SemiBold", 14F, FontStyle.Bold);
             lblProntos.Location = new Point(38, 69);
             lblProntos.Name = "lblProntos";
-            lblProntos.Size = new Size(168, 23);
+            lblProntos.Size = new Size(202, 27);
             lblProntos.TabIndex = 14;
             lblProntos.Text = "Pedidos Finalizados:";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.raio__1_;
-            pictureBox2.Location = new Point(38, 21);
+            pictureBox2.Location = new Point(38, 12);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(46, 20);
+            pictureBox2.Size = new Size(78, 31);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
@@ -119,7 +119,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(1035, 541);
+            ClientSize = new Size(1045, 541);
             Controls.Add(listBox1);
             Controls.Add(pictureBox2);
             Controls.Add(lblProntos);
