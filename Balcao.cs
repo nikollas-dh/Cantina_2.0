@@ -15,6 +15,7 @@ namespace Cantina_2._0
         public Balcao()
         {
             InitializeComponent();
+            
 
         }
 
@@ -54,11 +55,11 @@ namespace Cantina_2._0
                 {
                     PedidosBalcao.MarcarComoEntregue(pedidoParaEntregar);
 
-                    listBox1.Items.Remove(textoSelecionado); 
-                    listBox2.Items.Add(textoSelecionado + " | ENTREGUE"); 
+                    listBox1.Items.Remove(textoSelecionado);
+                    listBox2.Items.Add(textoSelecionado + " | ENTREGUE");
                 }
             }
-         }
+        }
 
         private void Balcao_Load(object sender, EventArgs e)
         {
@@ -87,6 +88,11 @@ namespace Cantina_2._0
             {
                 listBox2.Items.Add(pedido.ToString() + " | ENTREGUE");
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

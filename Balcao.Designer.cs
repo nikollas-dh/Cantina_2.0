@@ -45,6 +45,7 @@
             listBox2.Enabled = false;
             listBox2.Font = new Font("Inter", 8.25F);
             listBox2.FormattingEnabled = true;
+            listBox2.HorizontalScrollbar = true;
             listBox2.Location = new Point(38, 344);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(786, 164);
@@ -111,6 +112,7 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(786, 169);
             listBox1.TabIndex = 16;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // Balcao
             // 
