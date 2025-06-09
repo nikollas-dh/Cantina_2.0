@@ -51,6 +51,7 @@
             cmbViagem = new ComboBox();
             lblViagem = new Label();
             btnBalcao = new Button();
+            btnCozinha = new Button();
             ((System.ComponentModel.ISupportInitialize)NumQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -82,7 +83,7 @@
             btnAdicionar.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicionar.Location = new Point(200, 366);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(109, 37);
+            btnAdicionar.Size = new Size(109, 46);
             btnAdicionar.TabIndex = 2;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = false;
@@ -94,7 +95,7 @@
             btnRemover.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
             btnRemover.Location = new Point(623, 366);
             btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(86, 37);
+            btnRemover.Size = new Size(103, 46);
             btnRemover.TabIndex = 3;
             btnRemover.Text = "Remover";
             btnRemover.UseVisualStyleBackColor = false;
@@ -107,9 +108,9 @@
             btnFinalizar.FlatAppearance.BorderSize = 0;
             btnFinalizar.FlatAppearance.MouseDownBackColor = Color.Black;
             btnFinalizar.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
-            btnFinalizar.Location = new Point(428, 366);
+            btnFinalizar.Location = new Point(416, 366);
             btnFinalizar.Name = "btnFinalizar";
-            btnFinalizar.Size = new Size(106, 36);
+            btnFinalizar.Size = new Size(118, 46);
             btnFinalizar.TabIndex = 4;
             btnFinalizar.Text = "Finalizar";
             btnFinalizar.UseVisualStyleBackColor = false;
@@ -273,11 +274,23 @@
             btnBalcao.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
             btnBalcao.Location = new Point(737, 42);
             btnBalcao.Name = "btnBalcao";
-            btnBalcao.Size = new Size(95, 42);
+            btnBalcao.Size = new Size(108, 47);
             btnBalcao.TabIndex = 23;
             btnBalcao.Text = "Balcão";
             btnBalcao.UseVisualStyleBackColor = false;
             btnBalcao.Click += btnBalcao_Click;
+            // 
+            // btnCozinha
+            // 
+            btnCozinha.BackColor = Color.FromArgb(202, 196, 183);
+            btnCozinha.Font = new Font("Inter ExtraBold", 9F, FontStyle.Bold);
+            btnCozinha.Location = new Point(879, 42);
+            btnCozinha.Name = "btnCozinha";
+            btnCozinha.Size = new Size(108, 47);
+            btnCozinha.TabIndex = 24;
+            btnCozinha.Text = "Cozinha";
+            btnCozinha.UseVisualStyleBackColor = false;
+            btnCozinha.Click += btnCozinha_Click;
             // 
             // VendasForm
             // 
@@ -285,6 +298,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
             ClientSize = new Size(1045, 722);
+            Controls.Add(btnCozinha);
             Controls.Add(btnBalcao);
             Controls.Add(lblViagem);
             Controls.Add(cmbViagem);
@@ -340,5 +354,6 @@
         private ComboBox cmbViagem;
         private Label lblViagem;
         private Button btnBalcao;
+        private Button btnCozinha;
     }
 }

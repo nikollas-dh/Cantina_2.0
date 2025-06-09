@@ -21,42 +21,29 @@ namespace Cantina_2._0
 
         private void btnEntregue_Click(object sender, EventArgs e)
         {
-            //if (listBox1.SelectedItem != null)
-            //{
-            //    string textoSelecionado = listBox1.SelectedItem.ToString();
-
-
-            //    var pedidoParaRemover = PedidosBalcao.ObterPendentes()
-            //        .FirstOrDefault(p => p.ToString() == textoSelecionado);
-
-            //    if (pedidoParaRemover != null)
-            //    {
-            //        PedidosBalcao.MarcarComoEntregue(pedidoParaRemover);
-
-            //        listBox1.Items.Remove(textoSelecionado);
-            //        listBox2.Items.Add($"{textoSelecionado} | Entregue");
-
-            //        if (listBox2.Items.Count > 5)
-            //        { 
-            //            listBox2.Items.RemoveAt(0); 
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Selecione um item para marcar como entregue.");
-            //}
             if (listBox1.SelectedItem != null)
             {
                 string textoSelecionado = listBox1.SelectedItem.ToString();
                 var pedidoParaEntregar = PedidosBalcao.ObterPendentes()
                     .FirstOrDefault(p => p.ToString() == textoSelecionado);
+
+                if (pedidoParaEntregar.Itens.Any(p => p.PrecisaPreparar))
+                {
+                    MessageBox.Show("O pedido ainda contém itens que precisam ser preparados na cozinha!");
+                    return;
+                }
+
                 if (pedidoParaEntregar != null)
                 {
                     PedidosBalcao.MarcarComoEntregue(pedidoParaEntregar);
 
                     listBox1.Items.Remove(textoSelecionado);
                     listBox2.Items.Add(textoSelecionado + " | ENTREGUE");
+                }
+
+                if (listBox2.Items.Count > 5)
+                { 
+                    listBox2.Items.RemoveAt(0); 
                 }
             }
         }

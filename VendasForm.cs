@@ -5,8 +5,8 @@ namespace Cantina_2._0
     public partial class VendasForm : Form
     {
         private List<Produto> Itens;
-        
-       
+
+
         private Carrinho carrinho;
 
         public VendasForm()
@@ -16,24 +16,24 @@ namespace Cantina_2._0
 
             carrinho = new Carrinho();
 
-            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, });
-            listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.5, });
-            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300ml)", Preco = 4, });
-            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.5, });
-            listBox1.Items.Add(new Produto { Nome = "Hamburguer Simples", Preco = 8, });
-            listBox1.Items.Add(new Produto { Nome = "Hamburguer com Queijo", Preco = 9, });
-            listBox1.Items.Add(new Produto { Nome = "X-Bacon", Preco = 12, });
-            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 15, });
-            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml)", Preco = 2.5, });
+            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, Quantidade=1, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, Quantidade = 1, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, Quantidade = 1, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.5, Quantidade = 1, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300ml)", Preco = 4, Quantidade = 1, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.5, Quantidade = 1, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Cachorro Quente", Preco = 8, Quantidade = 1, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "X-Burger", Preco = 9, Quantidade = 1, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "X-Bacon", Preco = 12, Quantidade = 1, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 15, Quantidade = 1, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml)", Preco = 2.5, Quantidade = 1, PrecisaPreparar = false });
 
 
             NumQuantidade.Minimum = 1;
             NumQuantidade.Maximum = 10;
 
-            comboBoxPagamento.Items.Add("Pix" );
-            comboBoxPagamento.Items.Add("Dinheiro" );
+            comboBoxPagamento.Items.Add("Pix");
+            comboBoxPagamento.Items.Add("Dinheiro");
             comboBoxPagamento.Items.Add("Débito");
 
             txtValorPago.Visible = false;
@@ -52,7 +52,8 @@ namespace Cantina_2._0
                 {
                     Nome = produtoSelecionado.Nome,
                     Preco = produtoSelecionado.Preco * quantidade,
-                    Quantidade = quantidade
+                    Quantidade = quantidade,
+                    PrecisaPreparar = produtoSelecionado.PrecisaPreparar
 
                 };
                 carrinho.Adicionar(novoPedido);
@@ -95,8 +96,8 @@ namespace Cantina_2._0
                 MessageBox.Show("Selecione uma forma de pagamento.");
                 return;
             }
-            
-            string formaPagamento = comboBoxPagamento.SelectedItem.ToString();  
+
+            string formaPagamento = comboBoxPagamento.SelectedItem.ToString();
 
             if (formaPagamento == "Dinheiro")
             {
@@ -134,7 +135,7 @@ namespace Cantina_2._0
                 extrato += item.ToString() + "\n";
             }
 
-            Pedido pedido = new Pedido(txtNome.Text, carrinho.Listar(), formaPagamento); 
+            Pedido pedido = new Pedido(txtNome.Text, carrinho.Listar(), formaPagamento);
 
             string mensagem =
                 $"{pedido.NomeCliente}\n" +
@@ -175,8 +176,14 @@ namespace Cantina_2._0
 
         private void btnBalcao_Click(object sender, EventArgs e)
         {
-            Balcao minhaNovaJanela = new Balcao(); // Criando uma instância da janela Balcao
-            minhaNovaJanela.Show(); // Exibindo a nova janela sem bloquear a princip
+            Balcao novaJanela = new Balcao(); // Criando uma instância da janela Balcao
+            novaJanela.Show(); // Exibindo a nova janela sem bloquear a princip
+        }
+
+        private void btnCozinha_Click(object sender, EventArgs e)
+        {
+            Cozinha novaJanela = new Cozinha(); 
+            novaJanela.Show();
         }
     }
 }
