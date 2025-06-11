@@ -50,19 +50,6 @@ namespace Cantina_2._0
 
         private void Balcao_Load(object sender, EventArgs e)
         {
-            //listBox1.Items.Clear();
-            //listBox2.Items.Clear();
-
-            //foreach (var pedido in PedidosBalcao.ObterPendentes())
-            //{
-            //    listBox1.Items.Add(pedido.ToString());
-            //}
-
-            //foreach (var pedido in PedidosBalcao.ObterEntregues())
-            //{
-            //    listBox2.Items.Add($"{pedido.ToString()} | Entregue");
-            //}
-
             listBox1.Items.Clear();
             listBox2.Items.Clear();
 

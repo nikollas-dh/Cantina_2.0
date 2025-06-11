@@ -3,48 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\pedidosbalcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:pedidosbalcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:vendasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\pedidosbalcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:pedidosbalcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\balcao.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:balcao.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|c:\\users\\25163076\\desktop\\c#\\atividades\\cantina_2.0\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9E344A-9C67-435B-8EC3-9F240B11BBE9}|Cantina_2.0.csproj|solutionrelative:pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "VendasForm.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\VendasForm.cs",
               "RelativeDocumentMoniker": "VendasForm.cs",
@@ -70,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Cozinha.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Cozinha.cs",
               "RelativeDocumentMoniker": "Cozinha.cs",
@@ -82,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Balcao.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Balcao.cs",
               "RelativeDocumentMoniker": "Balcao.cs",
@@ -94,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Pedido.cs",
               "RelativeDocumentMoniker": "Pedido.cs",
@@ -107,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Carrinho.cs",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Carrinho.cs",
               "RelativeDocumentMoniker": "Carrinho.cs",
@@ -120,26 +116,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Balcao.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Balcao.Designer.cs",
-              "RelativeDocumentMoniker": "Balcao.Designer.cs",
-              "ToolTip": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Balcao.Designer.cs",
-              "RelativeToolTip": "Balcao.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:09:37.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Produto.cs",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Produto.cs",
               "RelativeDocumentMoniker": "Produto.cs",
               "ToolTip": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Produto.cs",
               "RelativeToolTip": "Produto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T15:09:38.724Z",
               "EditorCaption": ""
@@ -152,46 +135,46 @@
               "RelativeDocumentMoniker": "VendasForm.cs",
               "ToolTip": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\VendasForm.cs",
               "RelativeToolTip": "VendasForm.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAkwDYAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAewMMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T15:22:16.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "PedidosBalcao.cs",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\PedidosBalcao.cs",
               "RelativeDocumentMoniker": "PedidosBalcao.cs",
               "ToolTip": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\PedidosBalcao.cs",
               "RelativeToolTip": "PedidosBalcao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAA9wA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T12:07:56.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Balcao.cs",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Balcao.cs",
               "RelativeDocumentMoniker": "Balcao.cs",
               "ToolTip": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Balcao.cs",
               "RelativeToolTip": "Balcao.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T12:21:18.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Cozinha.cs",
               "DocumentMoniker": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Cozinha.cs",
               "RelativeDocumentMoniker": "Cozinha.cs",
               "ToolTip": "C:\\Users\\25163076\\Desktop\\C#\\Atividades\\Cantina_2.0\\Cozinha.cs",
               "RelativeToolTip": "Cozinha.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T13:34:31.02Z",
               "EditorCaption": ""

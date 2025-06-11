@@ -10,7 +10,8 @@ namespace Cantina_2._0
     {
         private static List<Pedido> pedidosPendentes = new List<Pedido>();
         private static List<Pedido> pedidosEntregues = new List<Pedido>();
-       // private static List<Pedido> pedidosCozinha = new List<Pedido>();
+       
+        private static List<Pedido> pedidosCozinha = new List<Pedido>();
 
 
         public static void AdicionarPedido(Pedido pedido)
