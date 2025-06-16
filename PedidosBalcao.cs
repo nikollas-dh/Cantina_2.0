@@ -16,7 +16,15 @@ namespace Cantina_2._0
 
         public static void AdicionarPedido(Pedido pedido)
         {
+            
+            {
+
+            }
             pedidosPendentes.Add(pedido);
+        }
+        public static List<Pedido> ObterPedidosCozinha()
+        {
+            return pedidosCozinha;
         }
 
         public static List<Pedido> ObterPendentes()
@@ -36,12 +44,7 @@ namespace Cantina_2._0
                 pedidosEntregues.Add(pedido);
             }
         }
-        public static List<Pedido> ObterPedidosCozinha()
-        {
-          return pedidosPendentes
-          .Where(p => p.Itens.Any(item => item.PrecisaPreparar))
-          .ToList();
-        }
+       
 
 
 

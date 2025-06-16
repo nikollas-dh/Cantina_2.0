@@ -15,7 +15,7 @@ namespace Cantina_2._0
 
         public Pedido(string nomeCliente, List<Produto> itens, string formaPagamento)
         {
-            NomeCliente = string.IsNullOrWhiteSpace(nomeCliente) ? "Cliente" : nomeCliente;
+            NomeCliente = nomeCliente;
             Itens = new List<Produto>(itens);
             HoraPedido = DateTime.Now;
             FormaPagamento = formaPagamento;
@@ -25,7 +25,7 @@ namespace Cantina_2._0
         public override string ToString()
         {
             string produtosTexto = string.Join(", ", Itens.Select(p => $"{p.Quantidade} - {p.Nome}"));
-            return $"{NomeCliente} | Produtos: {produtosTexto} | Hora: {HoraPedido:t} | Quantidade de itens: {Itens.Count} ";
+            return $"{NomeCliente} | Produtos: {produtosTexto} | Hora: {HoraPedido:t} | Quantidade de itens: {Itens.Count} | PENDENTE ";
         }
 
     }

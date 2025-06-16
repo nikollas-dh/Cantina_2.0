@@ -16,17 +16,17 @@ namespace Cantina_2._0
 
             carrinho = new Carrinho();
 
-            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, Quantidade = 1, PrecisaPreparar = false });
-            listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, Quantidade = 1, PrecisaPreparar = false });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, Quantidade = 1, PrecisaPreparar = true });
-            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.5, Quantidade = 1, PrecisaPreparar = true });
-            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300ml)", Preco = 4, Quantidade = 1, PrecisaPreparar = false });
-            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.5, Quantidade = 1, PrecisaPreparar = false });
-            listBox1.Items.Add(new Produto { Nome = "Cachorro Quente", Preco = 8, Quantidade = 1, PrecisaPreparar = true });
-            listBox1.Items.Add(new Produto { Nome = "X-Burger", Preco = 9, Quantidade = 1, PrecisaPreparar = true });
-            listBox1.Items.Add(new Produto { Nome = "X-Bacon", Preco = 12, Quantidade = 1, PrecisaPreparar = true });
-            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 15, Quantidade = 1, PrecisaPreparar = true });
-            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml)", Preco = 2.5, Quantidade = 1, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50,  PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.5, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "Suco Natural (300ml)", Preco = 4, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Refrigerante Lata", Preco = 4.5, PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Cachorro Quente", Preco = 8, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "X-Burger", Preco = 9, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "X-Bacon", Preco = 12, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "X-Tudo", Preco = 15, PrecisaPreparar = true });
+            listBox1.Items.Add(new Produto { Nome = "Água Mineral (500ml)", Preco = 2.5, PrecisaPreparar = false });
 
 
             NumQuantidade.Minimum = 1;
@@ -146,6 +146,7 @@ namespace Cantina_2._0
 
             MessageBox.Show(mensagem, "Extrato");
 
+           
             PedidosBalcao.AdicionarPedido(pedido);
 
 
@@ -192,6 +193,11 @@ namespace Cantina_2._0
         }
 
         private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblValor_Click(object sender, EventArgs e)
         {
 
         }

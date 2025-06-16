@@ -119,7 +119,7 @@
             // NumQuantidade
             // 
             NumQuantidade.Font = new Font("Inter", 8.25F);
-            NumQuantidade.Location = new Point(44, 398);
+            NumQuantidade.Location = new Point(33, 398);
             NumQuantidade.Name = "NumQuantidade";
             NumQuantidade.Size = new Size(142, 21);
             NumQuantidade.TabIndex = 5;
@@ -128,7 +128,7 @@
             // 
             lblCardápio.AutoSize = true;
             lblCardápio.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCardápio.Location = new Point(115, 97);
+            lblCardápio.Location = new Point(115, 100);
             lblCardápio.Name = "lblCardápio";
             lblCardápio.Size = new Size(138, 24);
             lblCardápio.TabIndex = 6;
@@ -148,7 +148,7 @@
             // 
             total.AutoSize = true;
             total.Font = new Font("Inter", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            total.Location = new Point(882, 454);
+            total.Location = new Point(862, 491);
             total.Name = "total";
             total.Size = new Size(54, 23);
             total.TabIndex = 8;
@@ -158,7 +158,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Inter Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(953, 455);
+            lblTotal.Location = new Point(922, 491);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(65, 22);
             lblTotal.TabIndex = 9;
@@ -178,7 +178,7 @@
             // 
             comboBoxPagamento.Font = new Font("Inter", 8.25F);
             comboBoxPagamento.FormattingEnabled = true;
-            comboBoxPagamento.Location = new Point(479, 257);
+            comboBoxPagamento.Location = new Point(479, 234);
             comboBoxPagamento.Name = "comboBoxPagamento";
             comboBoxPagamento.Size = new Size(118, 24);
             comboBoxPagamento.TabIndex = 11;
@@ -187,7 +187,7 @@
             // txtValorPago
             // 
             txtValorPago.Font = new Font("Inter", 8.25F);
-            txtValorPago.Location = new Point(479, 304);
+            txtValorPago.Location = new Point(479, 297);
             txtValorPago.Name = "txtValorPago";
             txtValorPago.Size = new Size(118, 21);
             txtValorPago.TabIndex = 12;
@@ -196,17 +196,18 @@
             // 
             lblValor.AutoSize = true;
             lblValor.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
-            lblValor.Location = new Point(393, 308);
+            lblValor.Location = new Point(396, 301);
             lblValor.Name = "lblValor";
             lblValor.Size = new Size(42, 17);
             lblValor.TabIndex = 14;
             lblValor.Text = "Valor:";
+            lblValor.Click += lblValor_Click;
             // 
             // lblTroco
             // 
             lblTroco.AutoSize = true;
             lblTroco.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTroco.Location = new Point(393, 352);
+            lblTroco.Location = new Point(393, 339);
             lblTroco.Name = "lblTroco";
             lblTroco.Size = new Size(45, 17);
             lblTroco.TabIndex = 16;
@@ -216,7 +217,7 @@
             // txtNome
             // 
             txtNome.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNome.Location = new Point(479, 173);
+            txtNome.Location = new Point(479, 148);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(118, 21);
             txtNome.TabIndex = 17;
@@ -225,7 +226,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
-            lblNome.Location = new Point(393, 177);
+            lblNome.Location = new Point(395, 152);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(46, 17);
             lblNome.TabIndex = 18;
@@ -236,7 +237,7 @@
             // 
             lblPagamento.AutoSize = true;
             lblPagamento.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
-            lblPagamento.Location = new Point(393, 259);
+            lblPagamento.Location = new Point(395, 236);
             lblPagamento.Name = "lblPagamento";
             lblPagamento.Size = new Size(78, 17);
             lblPagamento.TabIndex = 19;
@@ -245,7 +246,7 @@
             // txtTroco
             // 
             txtTroco.Font = new Font("Inter", 8.25F);
-            txtTroco.Location = new Point(479, 350);
+            txtTroco.Location = new Point(479, 335);
             txtTroco.Name = "txtTroco";
             txtTroco.Size = new Size(118, 21);
             txtTroco.TabIndex = 20;
@@ -255,7 +256,7 @@
             cmbViagem.Font = new Font("Inter", 8.25F);
             cmbViagem.FormattingEnabled = true;
             cmbViagem.Items.AddRange(new object[] { "SIM", "NÃO" });
-            cmbViagem.Location = new Point(479, 209);
+            cmbViagem.Location = new Point(479, 187);
             cmbViagem.Name = "cmbViagem";
             cmbViagem.Size = new Size(118, 24);
             cmbViagem.TabIndex = 21;
@@ -264,7 +265,7 @@
             // 
             lblViagem.AutoSize = true;
             lblViagem.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
-            lblViagem.Location = new Point(393, 211);
+            lblViagem.Location = new Point(395, 194);
             lblViagem.Name = "lblViagem";
             lblViagem.Size = new Size(57, 17);
             lblViagem.TabIndex = 22;
