@@ -19,10 +19,22 @@ namespace Cantina_2._0
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItems != null)
+            if (listBox1.SelectedItem != null)
             {
+                string textoSelecionado = listBox1.SelectedItem.ToString();
 
-                listBox1.Items.Remove(listBox1.SelectedItem);
+                
+                var pedido = PedidosBalcao.ObterPedidosCozinha()
+                    .FirstOrDefault(p =>
+                        $"Cliente: {p.NomeCliente} | Produtos: {string.Join(" | ", p.Itens.Where(i => i.PrecisaPreparar).Select(i => $"{i.Quantidade}x {i.Nome}"))}" == textoSelecionado);
+
+                if (pedido != null)
+                {
+                    PedidosBalcao.RemoverPedidoCozinha(pedido);
+                    PedidosBalcao.AdicionarPedido(pedido); 
+
+                    listBox1.Items.Remove(listBox1.SelectedItem);
+                }
             }
         }
 
@@ -36,7 +48,7 @@ namespace Cantina_2._0
                     .Where(p => p.PrecisaPreparar)
                     .Select(p => $"{p.Quantidade}x {p.Nome}");
 
-                string linha = $"Cliente: {pedido.NomeCliente} | Produtos: {string.Join(", ", itensParaCozinha)}";
+                string linha = $"Cliente: {pedido.NomeCliente} | Produtos: {string.Join(" | ", itensParaCozinha)}";
                 listBox1.Items.Add(linha);
             }
         }

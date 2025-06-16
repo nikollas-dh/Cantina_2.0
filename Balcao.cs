@@ -25,14 +25,11 @@ namespace Cantina_2._0
             {
                 string textoSelecionado = listBox1.SelectedItem.ToString();
                 var pedidoParaEntregar = PedidosBalcao.ObterPendentes()
+
                 .FirstOrDefault(p => p.ToString() == textoSelecionado);
 
                 
-                if (pedidoParaEntregar.Itens.Any(p => p.PrecisaPreparar))
-                {
-                    MessageBox.Show("O pedido ainda contém itens que precisam ser preparados na cozinha!");
-                    return;
-                }
+               
 
                 if (pedidoParaEntregar != null)
                 {
