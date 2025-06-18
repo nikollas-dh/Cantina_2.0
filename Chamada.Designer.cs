@@ -65,7 +65,6 @@
             listBox1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 23;
-            listBox1.Items.AddRange(new object[] { " Nikollas", " Vini", " Bella", " Campos" });
             listBox1.Location = new Point(81, 145);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(276, 326);

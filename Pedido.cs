@@ -25,7 +25,7 @@ namespace Cantina_2._0
         public override string ToString()
         {
             string produtosTexto = string.Join(", ", Itens.Select(p => $"{p.Quantidade} - {p.Nome}"));
-            return $"{NomeCliente} | Produtos: {produtosTexto} | Hora: {HoraPedido:t} | Quantidade de itens: {Itens.Count} | PENDENTE ";
+            return $"{NomeCliente} | Produtos: {produtosTexto} | Hora: {HoraPedido:t} | Quantidade de itens: {Itens.Count}";
         }
 
     }

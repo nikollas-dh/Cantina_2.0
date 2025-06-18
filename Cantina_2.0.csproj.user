@@ -10,6 +10,9 @@
     <Compile Update="Chamada.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Cardapio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VendasForm.cs">
       <SubType>Form</SubType>
     </Compile>

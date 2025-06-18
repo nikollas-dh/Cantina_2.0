@@ -131,10 +131,10 @@
             // lblCardápio
             // 
             lblCardápio.AutoSize = true;
-            lblCardápio.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCardápio.Location = new Point(115, 97);
+            lblCardápio.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            lblCardápio.Location = new Point(102, 97);
             lblCardápio.Name = "lblCardápio";
-            lblCardápio.Size = new Size(138, 24);
+            lblCardápio.Size = new Size(151, 27);
             lblCardápio.TabIndex = 6;
             lblCardápio.Text = "🍔Cardápio🍔";
             // 
