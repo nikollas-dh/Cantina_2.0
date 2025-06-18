@@ -16,7 +16,7 @@ namespace Cantina_2._0
 
             carrinho = new Carrinho();
 
-            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50,  PrecisaPreparar = false });
+            listBox1.Items.Add(new Produto { Nome = "Pão de Queijo", Preco = 3.50, PrecisaPreparar = false });
             listBox1.Items.Add(new Produto { Nome = "Coxinha", Preco = 5, PrecisaPreparar = false });
             listBox1.Items.Add(new Produto { Nome = "Pastel de Carne", Preco = 6, PrecisaPreparar = true });
             listBox1.Items.Add(new Produto { Nome = "Pastel de Queijo", Preco = 5.5, PrecisaPreparar = true });
@@ -146,7 +146,7 @@ namespace Cantina_2._0
 
             MessageBox.Show(mensagem, "Extrato");
 
-           
+
             PedidosBalcao.AdicionarPedido(pedido);
 
 
@@ -200,6 +200,17 @@ namespace Cantina_2._0
         private void lblValor_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Chamada novaJanela = new Chamada();
+            novaJanela.Show();
         }
     }
 }

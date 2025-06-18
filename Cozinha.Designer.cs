@@ -96,7 +96,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 241, 238);
-            ClientSize = new Size(1046, 582);
+            ClientSize = new Size(1045, 546);
             Controls.Add(btnFinalizar);
             Controls.Add(lblCozinha);
             Controls.Add(pictureBox2);
