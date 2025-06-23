@@ -15,6 +15,7 @@ namespace Cantina_2._0
         public Cozinha()
         {
             InitializeComponent();
+
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
@@ -23,7 +24,7 @@ namespace Cantina_2._0
             {
                 string textoSelecionado = listBox1.SelectedItem.ToString();
 
-                
+
                 var pedido = PedidosBalcao.ObterPedidosCozinha()
                     .FirstOrDefault(p =>
                         $"Cliente: {p.NomeCliente} | Produtos: {string.Join(" | ", p.Itens.Where(i => i.PrecisaPreparar).Select(i => $"{i.Quantidade}x {i.Nome}"))}" == textoSelecionado);
@@ -31,7 +32,7 @@ namespace Cantina_2._0
                 if (pedido != null)
                 {
                     PedidosBalcao.RemoverPedidoCozinha(pedido);
-                    PedidosBalcao.AdicionarPedido(pedido); 
+                    PedidosBalcao.AdicionarPedido(pedido);
 
                     listBox1.Items.Remove(listBox1.SelectedItem);
                 }
@@ -51,6 +52,30 @@ namespace Cantina_2._0
                 string linha = $"Cliente: {pedido.NomeCliente} | Produtos: {string.Join(" | ", itensParaCozinha)}";
                 listBox1.Items.Add(linha);
             }
+        }
+
+        private void btnBalcao_Click(object sender, EventArgs e)
+        {
+            Balcao novaJanela = new Balcao();
+            novaJanela.Show();
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            VendasForm telaVendas = new VendasForm(GestaoCardapio.Produtos);
+            telaVendas.Show();
+        }
+
+        private void btnChamada_Click(object sender, EventArgs e)
+        {
+            Chamada novaJanela = new Chamada();
+            novaJanela.Show();
+        }
+
+        private void btnCardapio_Click(object sender, EventArgs e)
+        {
+            Cardapio novaJanela = new Cardapio();
+            novaJanela.Show();
         }
     }
 }

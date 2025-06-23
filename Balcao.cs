@@ -15,7 +15,7 @@ namespace Cantina_2._0
         public Balcao()
         {
             InitializeComponent();
-            
+
 
         }
 
@@ -28,8 +28,8 @@ namespace Cantina_2._0
 
                 .FirstOrDefault(p => p.ToString() == textoSelecionado);
 
-                
-               
+
+
 
                 if (pedidoParaEntregar != null)
                 {
@@ -40,8 +40,8 @@ namespace Cantina_2._0
                 }
 
                 if (listBox2.Items.Count > 5)
-                { 
-                    listBox2.Items.RemoveAt(0); 
+                {
+                    listBox2.Items.RemoveAt(0);
                 }
             }
         }
@@ -65,6 +65,24 @@ namespace Cantina_2._0
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            VendasForm telaVendas = new VendasForm(GestaoCardapio.Produtos);
+            telaVendas.Show();
+        }
+
+        private void btnCozinha_Click(object sender, EventArgs e)
+        {
+            Cozinha novaJanela = new Cozinha();
+            novaJanela.Show();
+        }
+
+        private void btnCardapio_Click(object sender, EventArgs e)
+        {
+            Cardapio novaJanela = new Cardapio();
+            novaJanela.Show();
         }
     }
 }

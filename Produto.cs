@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cantina_2._0
 {
-    internal class Produto
+    public class Produto
     {
         public string Nome { get; set; }
         public double Preco { get; set; }

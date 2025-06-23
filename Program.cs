@@ -1,3 +1,5 @@
+using Cantina_2._0;
+
 namespace Cantina_2._0
 {
     internal static class Program
@@ -8,10 +10,15 @@ namespace Cantina_2._0
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new VendasForm());
+            
+                ApplicationConfiguration.Initialize();
+
+                // Aqui usamos a lista vinda da classe GestaoCardapio
+                var lista = GestaoCardapio.Produtos;
+
+                Application.Run(new VendasForm(lista));
+            
+
         }
     }
 }
